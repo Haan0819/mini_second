@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이슬톡톡 - 채팅 목록</title>
+    <link href="./css/pages/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/pages/friends.css">
+    <link rel="stylesheet" href="./css/components/navbar.css">
+    <link rel="stylesheet" href="./css/components/header.css">
+    <link rel="stylesheet" href="./css/components/userlist.css">
+    <link href="./images/iseul.png" rel="icon">
+</head>
+<body>
+    <nav class="nav">
+        <ul class="nav_list">
+            <li class="nav_btn">
+                <a href="./friends.html" class="active">
+                    <i class="fa-solid fa-user fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav_btn">
+                <a href="./chats.html" class="active">
+                    <i class="fa-solid fa-comment fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="header">
+            <h2 class="header_title">채팅</h2>
+            <div class="header_menu">
+                <span><i class="fas fa-search"></i></span>
+                <span><i class="fas fa-comment-dots"></i></span>
+            </div>
+        </header>
+
+        <main class="friends">
+            <div class="friend_list">
+                <a href="./chatroom1.html">
+                    <div class="user">
+                        <div class="friend_column">
+                            <div class="friend_pic1"></div>
+                        </div>
+                        <div class="friend_column">
+                            <p class="friend_nick">타노스</p>
+                            <p class="friend_state">그런 방법이 있구나!</p>
+                            <p class="user_time">오후 3시 48분</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="./chatroom2.html">
+                    <div class="user">
+                        <div class="friend_column">
+                            <div class="friend_pic2"></div>
+                        </div>
+                        <div class="friend_column">
+                            <p class="friend_nick">미래의 나</p>
+                            <p class="friend_state">그거 좋은 생각이야!</p>
+                            <p class="user_time">오후 4시 20분</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
+    <script src="https://kit.fontawesome.com/1efdee5a4d.js" crossorigin="anonymous"></script>
+</body>
+</html>

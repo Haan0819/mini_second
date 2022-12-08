@@ -1,0 +1,129 @@
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+}
+
+.chat_screen{
+    height: calc(100% - 160px);
+    overflow: auto;
+}
+
+.chat_screen_bar{
+    position: sticky;
+    top: 0;
+    height: 100px;
+    z-index: 1;
+}
+
+.chat_screen_comments{
+    padding: 0;
+    list-style-type: none;
+}
+
+.chat_screen_comments .comment{
+    position: relative;
+    left: 20px;
+    width: 350px;
+    height: 50px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #aeaeae;
+    border-radius: 8px;
+}
+
+.chat_screen_comments .comment::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-bottom: 16px solid transparent;
+    border-right: 16px solid #aeaeae;
+}
+
+.chat_screen_commentsm{
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chat_screen_commentsm .commentm{
+    position: relative;
+    right: 20px;
+    width: 200px;
+    height: 50px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #aeaeae;
+    border-radius: 8px;
+}
+
+.chat_screen_commentsm .commentm::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    width: 0;
+    height: 0;
+    border-bottom: 16px solid transparent;
+    border-left: 16px solid #aeaeae;
+}
+
+.chat_form{
+    height: 160px;
+    background-color: #ffffff;
+}
+
+.chat_user{
+    background-color: #f2f2f2;
+}
+
+.chat_form_plugin{
+    height: 40px;
+    background-color: rgb(245, 138, 138);
+}
+
+.chat_form_icon{
+    line-height: 40px !important;
+    margin: 0 0 0 15px;
+}
+
+.chat_form_field{
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.chat_form_field > * {
+    font-size: 1em;
+    display: block;
+}
+
+.chat_form_msg{
+    width: calc(100% - 120px);
+    height: 100px;
+    padding: 10px;
+    border: none;
+    resize: none;
+  }
+
+.chat_form_msg:focus{
+    outline: none;
+}
+
+.chat_form_btn{
+    width: 100px;
+    height: 100px;
+    background-color: #aeaeae;
+    border-radius: 8px;
+}
+
+.chat_form_btn:active{
+    background-color: #8b8383;
+}

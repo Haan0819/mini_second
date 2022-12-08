@@ -1,0 +1,78 @@
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px;
+    position: relative;
+}
+
+.friend_list a{
+    text-decoration: none;
+    color: initial;
+}
+
+.user:hover{
+    background-color: #f2f2f2;
+}
+
+.user_pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    background-image: url("../../images/iseul.png");
+    margin-right: 10px;
+}
+
+.friend_pic:not(.friend_pic){
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    background-color: skyblue;
+    margin-right: 10px;
+}
+
+.user_nick{
+    margin: 8px;
+    
+}
+
+.user_state, .user_message{
+    margin: 8px;
+    color: rgb(111, 119, 126);
+}
+
+.friend_pic1{
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    background-image: url("../../images/타노스1.jpg");
+    background-size: 100%;
+    margin-right: 10px;
+}
+
+
+.friend_state, .user_message{
+    font-size: 1em;
+    margin: 5px;
+    width: 80vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #5e5858;
+}
+
+.friend_pic2{
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    background-color: skyblue;
+    background-size: 100%;
+    margin-right: 10px;
+}
+
+.user_time{
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    color: #aeaeae;
+    font-size: 0.8em;
+}

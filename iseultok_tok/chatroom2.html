@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이슬톡톡 - 채팅</title>
+    <link href="./css/pages/common.css" rel="stylesheet">
+    <link href="./css/pages/chatroom.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/components/userlist.css">
+    <link href="./images/iseul.png" rel="icon">
+</head>
+<body>
+    <div class="container">
+        <main class="chat_screen">
+            <section class="chat_screen_bar">
+                <div class="user chat_user">
+                    <div class="user_column">
+                        <div class="friend_pic2"></div>
+                    </div>
+                    <div class="user_column">
+                        <p class="user_nick">미래의 나</p>
+                        <p class="user_message">
+                            <i class="fas fa-user"></i> 2
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <ul class="chat_screen_comments">
+                <li class="comment">공부하기 귀찮지?</li>
+                <li class="comment">그럴땐 좋은 방법이 있어</li>
+                <li class="comment">귀찮은건 미래의 나에게 미뤄버려!</li>
+                <li class="comment">나중에 어떻게든 되겠지~</li>
+                <li class="comment">인간은 위기의 순간에 초인적인 힘을</li>
+                <li class="comment">발휘한대! 나중으로 미루고 이슬톡톡 한잔 어때?</li>
+                <li class="comment">일단 놀고 생각하자!</li>
+            </ul>
+            <ul class="chat_screen_commentsm">
+                <li class="commentm">그거 좋은 생각이야!</li>
+            </ul>
+        </main>
+        <form class="chat_form" onsubmit="return false;">
+            <div class="chat_form_plugin">
+                <i class="far fa-smile chat_form_icon"></i>
+                <i class="fas fa-paperclip chat_form_icon"></i>
+                <i class="far fa-calendar-check chat_form_icon"></i>
+            <div class="chat_form_field">
+                <textarea class="chat_form_msg"></textarea>
+                <input class="chat_form_btn" type="submit" value="전송">
+            </div>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/c8e2b99a17.js" crossorigin="anonymous"></script>
+</body>
+</html>
