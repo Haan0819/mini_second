@@ -260,171 +260,22 @@
 
     </section><!-- End About Section -->
 
-  <div class="accordion" id="accordionExample">
+<div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
         Accordion Item #1
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
-            <section id="about_list" class="about_list">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Info</h2>
-          <h3>OMO R1MINI <span>실시간 정보</span></h3>
-          <p>실시간 정보를 입력할 수 있습니다.</p>
-        </div>
-
-        <div class="row content">
-          <div class="section-title">
-
-            <!-- Project Card Example -->
-            {% if info_list %}
-            {% for p in info_list %}
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <div class="infoarea">
-                  <h6 class="m-0 font-weight-bold text-primary infoTITLE">INFO</h6>
-
-                  <a href="#" title="Button push blue/green" class="button btnPush btnBlueGreen">Prev</a>
-                  <a href="#" title="Button push blue/green" class="button btnPush btnBlueGreen">Next</a>
-
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="infoTop">
-                  <div class="bat">
-                    <h4 class="small font-weight-bold">BATTERY<span class="float-right bat_review">
-                        {{ p.battery }}
-                      </span></h4>
-                    <div class="progress mb-4">
-                      <div class="progress bat_prog_review" role="progressbar" aria-label="Animated striped example" aria-valuenow="20"
-                        aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bat_prog_col_review" style="width: 100%"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="infoBottom">
-                    <div class="colInfo mb-4">
-                      <div>
-                        <h4 class="small font-weight-bold color_box_fig">COLOR<span class="float-right">
-
-                        <div>
-                          <input class="color_box_input" type="color" value="{{ p.color }}" disabled />
-                        </div>
-                        </span></h4>
-                      </div>
-                    </div>
-                    <div class="runInfo mb-4">
-                      <div>
-                        <h4 class="small font-weight-bold runtime_fig">RUN TIME<span class="float-right bat-fig">
-
-                      <div>
-                        <h3 class="runtime_info">
-                          {{ p.runtime }}
-                        </h3>
-                      </div>
-
-                      </span></h4>
-                      </div>
-                    </div>
-                    <div class="firmV mb-4">
-                      <h4 class="small font-weight-bold firmV_fig">firmV<span class="float-right bat-fig">
-                      <div>
-                        <h3 class="firmV_info">
-                          {{ p.firmV }}
-                        </h3>
-                      </div>
-                      </span></h4>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-            {% else %}
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <div class="infoarea">
-                  <h6 class="m-0 font-weight-bold text-primary infoTitle">INFO</h6>
-                  {% if user.is_authenticated %}
-                  <a href="" title="Button push blue/green" class="button btnPush btnBlueGreen" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">INPUT</a>
-                  {% endif %}
-
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="infoTop">
-                  <div class="bat">
-                    <h4 class="small font-weight-bold">BATTERY<span class="float-right bat-fig" >
-                        0
-                      </span></h4>
-                    <div class="progress mb-4">
-                      <div class="progress bat-prog" role="progressbar" aria-label="Animated striped example" aria-valuenow="20"
-                        aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bat_prog_col" style="width: 100%"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="infoBottom">
-                    <div class="colInfo mb-4">
-                      <div>
-                        <h4 class="small font-weight-bold color_box_fig">COLOR<span class="float-right">
-
-                        <div>
-                          <input class="color_box_input" type="color" value="#000000" disabled />
-                        </div>
-                        </span></h4>
-                      </div>
-                    </div>
-                    <div class="runInfo mb-4">
-                      <div>
-                        <h4 class="small font-weight-bold runtime_fig">RUN TIME<span class="float-right bat-fig">
-
-                      <div>
-                        <h3 class="runtime_info">
-                          0
-                        </h3>
-                      </div>
-
-                      </span></h4>
-                      </div>
-                    </div>
-                    <div class="firmV mb-4">
-                      <h4 class="small font-weight-bold firmV_fig">firmV<span class="float-right bat-fig">
-                      <div>
-                        <h3 >
-                          NULL
-                        </h3>
-                      </div>
-                      </span></h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endif %}
-          </div>
-        </div>
-
+{% include 'webapp/info_review.html' %}
       </div>
 
-      </div>
-
-
-    </section>
-      </div>
     </div>
   </div>
-
 </div>
+
 
 
 
@@ -784,95 +635,14 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">정보 입력</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form action="{% url 'webapp:createform' %}" class="robot_input">
-            <div class="modalForm">
-              <div>
-                <div>
-                  배터리<input type="text" name="battery" id="batteryInput">
-                </div>
-                <br>
-                <div>
-                  경과 시간<input type="text" name="runtime" id="runtimeInput">
-                </div>
-                <br>
-                <div>
-                  색상<input type="color" name="color" id="colorInput">
-                </div>
-                <br>
-                <div>
-                  펌웨어 버전
-                  <select name="firmV">
-                    <option>r1m_v2.32</option>
-                  </select>
-                </div>
-              </div>
+  <!-- Modal -->
+  {% include 'webapp/omo_edit.html' %}
 
-              <div class="buttonArea">
-                <div>
-                  <button type="submit" class="btn btn-secondary">입력</button>
-                </div>
-                <div class="inputButton">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
-                </div>
-              </div>
-            </div>
-          </form>
+  <!-- Login modal -->
+  {% include 'webapp/login_temp.html'  %}
 
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-          <!-- Login modal -->
-        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="loginModalLabel">Log In</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body logmodalbody"> <div>
-                            {% include 'webapp/login_temp.html'  %}
-
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Logout modal -->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="logoutModalLabel">Log Out</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" id="logoutmodalbody">
-                      <div class="logout_temp"></div>
-                      <div id="logout_tdiv"><h3 id="logout_text">로그아웃 되었습니다.</h3></div>
-                    </div>
-                    <div class="modal-footer">
-                        <form action="{% url 'webapp:logout' %}" method="post" class="col-md-4 logout_button">
-                          {% csrf_token %}
-                          <input type="submit" value="확인">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- Logout modal -->
+  {% include 'webapp/logout_temp.html' %}
 
   <!-- Vendor JS Files -->
   <script src="{% static 'webapp/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
