@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load recent_post %}
 <html lang="ko">
 
 <head>
@@ -121,7 +122,9 @@
 
             <!-- Project Card Example -->
             {% if info_list %}
-            {% for p in info_list %}
+            {% recent_posts 1 as posts %}
+            {% for p in posts %}
+
             <div class="card shadow mb-4">
               <div class="card-header py-3">
                 <div class="infoarea">
@@ -185,6 +188,7 @@
                 </div>
               </div>
             </div>
+
             {% endfor %}
             {% else %}
             <div class="card shadow mb-4">
@@ -290,6 +294,7 @@
             laborum.</p>
           <a class="cta-btn" href="#">Call To Action</a>
         </div>
+
 
       </div>
     </section><!-- End Cta Section -->

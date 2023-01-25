@@ -12,7 +12,6 @@ class PostList(ListView):
    paginate_by = 1
 
 
-
 def createform(request):
    std = Info()
    std.battery = request.GET['battery']
