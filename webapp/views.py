@@ -12,33 +12,14 @@ class PostList(ListView):
    paginate_by = 1
 
 
-def calc_time(ms):
-   second = int(int(ms) / 1000)
-   ms = int((int(ms) % 1000) / 100)
-   minute = int(second / 60)
-   second %= 60
-   hour = int(minute / 60)
-   minute %= 60
-
-   result = ""
-   if hour > 0:
-      result += str(hour) + '시간 '
-   if minute > 0:
-      result += str(minute) + '분 '
-   if second > 0:
-      if ms > 0 :
-         result += str(second) + '.' + str(ms) + '초 '
-      else :
-         result += str(second) + '초 '
-   return result
-
 
 def createform(request):
    std = Info()
    std.battery = request.GET['battery']
    std.color = request.GET['color']
    std.runtime = request.GET['runtime']
-   std.runtime = calc_time(std.runtime)
+   std.firmV = request.GET['firmV']
+
    std.save()
 
    return redirect('/')
